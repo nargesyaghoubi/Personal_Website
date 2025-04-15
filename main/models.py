@@ -9,6 +9,10 @@ class Basics(models.Model):
     web_title = models.CharField(max_length=120, blank=True)
     map = models.TextField(blank=True)
     avatar = models.ImageField(upload_to='photos/', blank=True)
+    phone = models.TextField(blank=True)
+    linkedine = models.TextField(blank=True)
+    github = models.TextField(blank=True)
+    twitter = models.TextField(blank=True)
 
     def __str__(self):
         return 'Narges'
