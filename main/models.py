@@ -30,6 +30,7 @@ class Service(models.Model):
     icon = models.CharField(max_length=30, blank=True)
     title = models.CharField(max_length=50, blank=True)
     text = models.TextField(blank=True)
+    link = models.URLField(blank=True)
 
     def __str__(self):
         return f'{self.id} - {self.title}'
