@@ -274,33 +274,17 @@
         <h2>my <span>services</span></h2>
 
 
-        </div>
+    </div>
 
     <div class="box-container">
         {% for service in services %}
-        <div class="service-item">
-            <i class="{{ service.icon }}"></i>
-            <a href="{{ service.link }}"><h3>{{ service.title }}</h3></a>
-            <a href="{{ service.link }}"><p>{{ service.text }}</p></a>
+            <div class="service-item">
+                <i class="{{ service.icon }}"></i>
+                <a href="{{ service.link }}"><h3>{{ service.title }}</h3></a>
+                <a href="{{ service.link }}"><p>{{ service.text }}</p></a>
 
-        </div>
+            </div>
         {% endfor %}
-{##}
-{#        <div class="service-item">#}
-{#            <i class="far fa-file-video"></i>#}
-{#            <h3>video editing</h3>#}
-{#            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.#}
-{#                Ex repellendus porro facilis.</p>#}
-{#        </div>#}
-{##}
-{#        <div class="service-item">#}
-{#            <i class="fas fa-search-dollar"></i>#}
-{#            <h3>SEO Marketing</h3>#}
-{#            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.#}
-{#                Ex repellendus porro facilis.</p>#}
-{#        </div>#}
-{##}
-{#    </div>#}
 
 </section>
 <!-------------------- Services Area (End) -------------------->
