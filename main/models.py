@@ -1,5 +1,6 @@
 from django.db import models
 import datetime
+from ckeditor.fields import RichTextField
 
 
 class Contact(models.Model):
@@ -30,7 +31,7 @@ class Skill(models.Model):
 
 class Project(models.Model):
     icon = models.CharField(max_length=30, blank=True)
-    title = models.CharField(max_length=50, blank=True)
+    title = RichTextField(max_length=50, blank=True)
     text = models.TextField(blank=True)
     link = models.URLField(blank=True)
 
@@ -43,7 +44,7 @@ class Academy(models.Model):
         verbose_name_plural = 'Academics'
 
     icon = models.CharField(max_length=30, blank=True)
-    title = models.CharField(max_length=50, blank=True)
+    title = RichTextField(max_length=50, blank=True)
     year = models.CharField(max_length=15, blank=True)
     text = models.TextField(blank=True)
 
@@ -56,7 +57,7 @@ class Course(models.Model):
         verbose_name_plural = 'Courses'
 
     title = models.CharField(max_length=70, blank=True)
-    text = models.TextField(blank=True)
+    text = RichTextField(blank=True)
     image = models.ImageField(upload_to='photos/course/', blank=True)
     date = models.DateField(default=datetime.datetime.now)
 

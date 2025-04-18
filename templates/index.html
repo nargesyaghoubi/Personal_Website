@@ -53,7 +53,7 @@
         <a href="#home">home</a>
         <a href="#about">about</a>
         <a href="#project">projects</a>
-        <a href="#portfolio">portfolio</a>
+        <a href="#portfolio">Courses</a>
         <a href="#contact">contact</a>
     </nav>
 
@@ -102,18 +102,18 @@
         <div class="content">
 
             <h2>My name is Narges Yaghoubi</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae aut adipisci necessitatibus veniam, provident
-                vero architecto praesentium, non sequi libero corrupti molestias.
-                Architecto voluptate eligendi maiores, error magni accusamus officia.</p>
+            <p>Passionate and driven programmer with two years of experience and asolid foundation in Python,
+                with knowledge of Machine Learning, DeepLearning, and NLP models and algorithms.
+                Experienced in multiple projectsrelated to Image Processing and Computer Vision.
+                Eager to apply my skillsin dynamic, hands-on projects and collaborative environments, whilecontinuously expanding my knowledge and pushing the boundaries of myexpertise.</p>
 
             <div class="about-info">
 
                 <div class="info">
                     <h4>age: <span>23</span></h4>
                     <h4>gender: <span>female</span></h4>
-                    <h4>language: <span>urdu, english</span></h4>
-                    <h4>work: <span>Front-End developer</span></h4>
+                    <h4>language: <span>English, German, Persian</span></h4>
+                    <h4>work: <span>Python Programmer & Data Scientist</span></h4>
                     <h4>freelance: <span>available</span></h4>
                     <a href="#" class="btn">download CV <i class="fas fa-download"></i></a>
                 </div>
@@ -121,23 +121,15 @@
                 <div class="counting">
 
                     <div class="box">
-                        <h1 class="count" data-count="4">4+</h1>
+                        <h1 class="count">2</h1>
                         <h3>years of experience</h3>
                     </div>
 
                     <div class="box">
-                        <h1 class="count" data-count="100">100+</h1>
+                        <h1 class="count" data-count="10">10</h1>
                         <h3>projects completed</h3>
                     </div>
 
-                    <div class="box">
-                        <h1 class="count" data-count="80">80+</h1>
-                        <h3>happy clients</h3>
-                    </div>
-
-                    <div class="box">
-                        <h1 class="count" data-count="20">20+</h1>
-                        <h3>awards won</h3>
                     </div>
 
                 </div>
@@ -260,7 +252,7 @@
             <img src="{{ course.image.url }}" alt="course"/>
 
                 <div class="content">
-                    <h4>{{ course.title }}</h4>
+                    <h4>{{ course.title|safe }}</h4>
                     <p>{{ course.text }}</p>
 
 
@@ -276,220 +268,6 @@
 
 </section>
 <!-------------------- Portfolio Area (End) -------------------->
-
-
-{#<!-------------------- Testimonials Area (Start) -------------------->#}
-{#<section class="testimonial" id="testimonial">#}
-{##}
-{#    <div class="heading">#}
-{#        <h2><span>testimonials</span></h2>#}
-{#    </div>#}
-{##}
-{#    <div class="swiper-container testimonial-slider">#}
-{#        <div class="swiper-wrapper">#}
-{##}
-{#            <div class="swiper-slide testi-item">#}
-{#                <img src="{% static 'images/Testimonials/pic-1.png' %}" alt="Testimonial-Pic"/>#}
-{##}
-{#                <i class="fas fa-quote-left"></i>#}
-{##}
-{#                <p class="comment">#}
-{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
-{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
-{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
-{#                    repellendus.#}
-{#                </p>#}
-{##}
-{#                <div class="intro">#}
-{#                    <h3>jason roy</h3>#}
-{#                    <h5>web developer</h5>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide testi-item">#}
-{#                <img src="{% static 'images/Testimonials/pic-2.png' %}" alt="Testimonial-Pic"/>#}
-{##}
-{#                <i class="fas fa-quote-left"></i>#}
-{##}
-{#                <p class="comment">#}
-{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
-{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
-{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
-{#                    repellendus.#}
-{#                </p>#}
-{##}
-{#                <div class="intro">#}
-{#                    <h3>evelyn jones</h3>#}
-{#                    <h5>freelancer</h5>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide testi-item">#}
-{#                <img src="{% static 'images/Testimonials/pic-3.png' %}" alt="Testimonial-Pic"/>#}
-{##}
-{#                <i class="fas fa-quote-left"></i>#}
-{##}
-{#                <p class="comment">#}
-{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
-{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
-{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
-{#                    repellendus.#}
-{#                </p>#}
-{##}
-{#                <div class="intro">#}
-{#                    <h3>luke wood</h3>#}
-{#                    <h5>graphic designer</h5>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide testi-item">#}
-{#                <img src="{% static 'images/Testimonials/pic-4.png' %}" alt="Testimonial-Pic"/>#}
-{##}
-{#                <i class="fas fa-quote-left"></i>#}
-{##}
-{#                <p class="comment">#}
-{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
-{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
-{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
-{#                    repellendus.#}
-{#                </p>#}
-{##}
-{#                <div class="intro">#}
-{#                    <h3>sarah glenn</h3>#}
-{#                    <h5>freelancer</h5>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide testi-item">#}
-{#                <img src="{% static 'images/Testimonials/pic-5.png' %}" alt="Testimonial-Pic"/>#}
-{##}
-{#                <i class="fas fa-quote-left"></i>#}
-{##}
-{#                <p class="comment">#}
-{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
-{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
-{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
-{#                    repellendus.#}
-{#                </p>#}
-{##}
-{#                <div class="intro">#}
-{#                    <h3>samit patel</h3>#}
-{#                    <h5>graphic designer</h5>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#        </div>#}
-{##}
-{#        <div class="swiper-pagination swiper-pagination1"></div>#}
-{##}
-{#    </div>#}
-{#</section>#}
-<!-------------------- Testimonials Area (End) -------------------->
-
-
-<!-------------------- Blog Area (Start) -------------------->
-{#<section class="blog" id="blog">#}
-{##}
-{#    <div class="heading">#}
-{#        <h2>my <span>blog</span></h2>#}
-{#    </div>#}
-{##}
-{#    <div class="swiper-container blog-slider">#}
-{#        <div class="swiper-wrapper">#}
-{##}
-{#            <div class="swiper-slide blog-item">#}
-{#                <div class="image">#}
-{#                    <img src="{% static 'images/Blogs/blog-1.png' %}" alt="Blog-Image"/>#}
-{#                </div>#}
-{#                <div class="content">#}
-{#                    <div class="intro">#}
-{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
-{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
-{#                    </div>#}
-{#                    <a class="main-heading" href="#">How to make your website responsive</a>#}
-{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
-{#                        Nam possimus modi.#}
-{#                    </p>#}
-{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide blog-item">#}
-{#                <div class="image">#}
-{#                    <img src="{% static 'images/Blogs/blog-2.png' %}" alt="Blog-Image"/>#}
-{#                </div>#}
-{#                <div class="content">#}
-{#                    <div class="intro">#}
-{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
-{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
-{#                    </div>#}
-{#                    <a class="main-heading" href="#">Learn Web Development As A Beginner</a>#}
-{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
-{#                        Nam possimus modi.#}
-{#                    </p>#}
-{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide blog-item">#}
-{#                <div class="image">#}
-{#                    <img src="{% static 'images/Blogs/blog-3.png' %}" alt="Blog-Image"/>#}
-{#                </div>#}
-{#                <div class="content">#}
-{#                    <div class="intro">#}
-{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
-{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
-{#                    </div>#}
-{#                    <a class="main-heading" href="#">Complete Roadmap For Web Development</a>#}
-{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
-{#                        Nam possimus modi.#}
-{#                    </p>#}
-{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide blog-item">#}
-{#                <div class="image">#}
-{#                    <img src="{% static 'images/Blogs/blog-4.png' %}" alt="Blog-Image"/>#}
-{#                </div>#}
-{#                <div class="content">#}
-{#                    <div class="intro">#}
-{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
-{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
-{#                    </div>#}
-{#                    <a class="main-heading" href="#">Websites & Tools For Every Web Developer</a>#}
-{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
-{#                        Nam possimus modi.#}
-{#                    </p>#}
-{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="swiper-slide blog-item">#}
-{#                <div class="image">#}
-{#                    <img src="{% static 'images/Blogs/blog-5.png' %}" alt="Blog-Image"/>#}
-{#                </div>#}
-{#                <div class="content">#}
-{#                    <div class="intro">#}
-{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
-{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
-{#                    </div>#}
-{#                    <a class="main-heading" href="#">Top 10 CSS tricks for every web developer</a>#}
-{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
-{#                        Nam possimus modi.#}
-{#                    </p>#}
-{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#        </div>#}
-{##}
-{#        <div class="swiper-pagination swiper-pagination2"></div>#}
-{##}
-{#    </div>#}
-{##}
-{#</section>#}
-<!-------------------- Blog Area (End) -------------------->
 
 
 <!-------------------- Contact Area (Start) -------------------->
@@ -576,7 +354,7 @@
     </div>
 
     <div class="content">
-        <p>created by <span>AS_Designs</span> | all rights reserved</p>
+        <p>created by <span>Narges Yaghoubi</span> | all rights reserved</p>
     </div>
 </footer>
 <!-------------------- Footer Area (End) -------------------->
