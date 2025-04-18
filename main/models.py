@@ -2,10 +2,11 @@ from django.db import models
 import datetime
 
 
-class Basics(models.Model):
+class Contact(models.Model):
     class Meta:
-        verbose_name_plural = 'Basics'
+        verbose_name_plural = 'Contact'
 
+    icon = models.CharField(max_length=30, blank=True)
     web_title = models.CharField(max_length=120, blank=True)
     map = models.TextField(blank=True)
     avatar = models.ImageField(upload_to='photos/', blank=True)
@@ -13,6 +14,7 @@ class Basics(models.Model):
     linkedine = models.TextField(blank=True)
     github = models.TextField(blank=True)
     twitter = models.TextField(blank=True)
+    email = models.EmailField(blank=True)
 
     def __str__(self):
         return 'Narges'
@@ -26,7 +28,7 @@ class Skill(models.Model):
         return f'{self.id} - {self.title} ({self.percent}%)'
 
 
-class Service(models.Model):
+class Project(models.Model):
     icon = models.CharField(max_length=30, blank=True)
     title = models.CharField(max_length=50, blank=True)
     text = models.TextField(blank=True)
@@ -49,13 +51,13 @@ class Academy(models.Model):
         return f'{self.id} - {self.title}'
 
 
-class Blog(models.Model):
+class Course(models.Model):
     class Meta:
-        verbose_name_plural = 'Posts'
+        verbose_name_plural = 'Courses'
 
     title = models.CharField(max_length=70, blank=True)
     text = models.TextField(blank=True)
-    image = models.ImageField(upload_to='photos/blog/', blank=True)
+    image = models.ImageField(upload_to='photos/course/', blank=True)
     date = models.DateField(default=datetime.datetime.now)
 
     def __str__(self):

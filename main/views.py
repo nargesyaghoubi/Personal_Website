@@ -19,17 +19,17 @@ from .models import *
 
 def index(request):
     skills = Skill.objects.all()
-    services = Service.objects.all()
+    projects = Project.objects.all()
     academics = Academy.objects.all()
-    basics = Basics.objects.all()
-    posts = Blog.objects.order_by('-date')[:4]
+    courses = Course.objects.all()
+    # posts = Course.objects.order_by('-date')[:4]
 
     context ={
         'skills': skills,
-        'services': services,
+        'projects': projects,
         'academics': academics,
-        'basics': basics,
-        'posts' : posts
+        'courses': courses,
+        # 'posts': posts
     }
     return render(request, template_name='index.html', context=context)
 

@@ -11,6 +11,7 @@
     <title>Narges Yaghoubi | Personal Portfolio</title>
 
     <!-- Font-Awesome CSS -->
+
     <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/all.min.css' %}"/>
 
     <!-- Swiper CSS -->
@@ -22,6 +23,9 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css>
+
+
 
 </head>
 <body>
@@ -48,10 +52,8 @@
     <nav class="navbar">
         <a href="#home">home</a>
         <a href="#about">about</a>
-        <a href="#service">service</a>
+        <a href="#project">projects</a>
         <a href="#portfolio">portfolio</a>
-        <a href="#testimonial">testimonials</a>
-        <a href="#blog">blogs</a>
         <a href="#contact">contact</a>
     </nav>
 
@@ -182,7 +184,7 @@
 <section class="qualification">
 
     <div class="heading">
-        <h2>my <span>qualification</span></h2>
+        <h2>My <span>Education</span></h2>
     </div>
 
     <div class="box-container">
@@ -192,70 +194,9 @@
             <div class="experience-item">
                 <i class="fas fa-graduation-cap"></i>
                 <div class="content">
-                    <span>2015 - 2016</span>
-                    <h3>engineering</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-                        Vitae Vel Quasi Consectetur Expedita Ipsam Similique Maiores
-                        Ipsa? Error, Debitis Ullam.</p>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <i class="fas fa-graduation-cap"></i>
-                <div class="content">
-                    <span>2016 - 2017</span>
-                    <h3>engineering</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-                        Vitae Vel Quasi Consectetur Expedita Ipsam Similique Maiores
-                        Ipsa? Error, Debitis Ullam.</p>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <i class="fas fa-graduation-cap"></i>
-                <div class="content">
-                    <span>2017 - 2018</span>
-                    <h3>engineering</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-                        Vitae Vel Quasi Consectetur Expedita Ipsam Similique Maiores
-                        Ipsa? Error, Debitis Ullam.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="experience">
-
-            <div class="experience-item">
-                <i class="fas fa-briefcase"></i>
-                <div class="content">
-                    <span>2018 - 2019</span>
-                    <h3>front-end development</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-                        Vitae Vel Quasi Consectetur Expedita Ipsam Similique Maiores
-                        Ipsa? Error, Debitis Ullam.</p>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <i class="fas fa-briefcase"></i>
-                <div class="content">
-                    <span>2019 - 2020</span>
-                    <h3>front-end development</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-                        Vitae Vel Quasi Consectetur Expedita Ipsam Similique Maiores
-                        Ipsa? Error, Debitis Ullam.</p>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <i class="fas fa-briefcase"></i>
-                <div class="content">
-                    <span>2020 - 2021</span>
-                    <h3>front-end development</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
-                        Vitae Vel Quasi Consectetur Expedita Ipsam Similique Maiores
-                        Ipsa? Error, Debitis Ullam.</p>
+                    <span>2016 - 2019</span>
+                    <h3>Mathematics and physics</h3>
+                    <p>Alghadir High School</p>
                 </div>
             </div>
 
@@ -268,20 +209,20 @@
 
 
 <!-------------------- Services Area (Start) -------------------->
-<section class="service" id="service">
+<section class="service" id="project">
 
     <div class="heading">
-        <h2>my <span>services</span></h2>
+        <h2>My <span>Projects</span></h2>
 
 
     </div>
 
     <div class="box-container">
-        {% for service in services %}
+        {% for project in projects %}
             <div class="service-item">
-                <i class="{{ service.icon }}"></i>
-                <a href="{{ service.link }}"><h3>{{ service.title }}</h3></a>
-                <a href="{{ service.link }}"><p>{{ service.text }}</p></a>
+                <i class="{{ project.icon }}"></i>
+                <a href="{{ project.link }}"><h3>{{ project.title }}</h3></a>
+                <a href="{{ project.link }}"><p>{{ project.text }}</p></a>
 
             </div>
         {% endfor %}
@@ -294,79 +235,40 @@
 <section class="portfolio" id="portfolio">
 
     <div class="heading">
-        <h2>my <span>portfolio</span></h2>
+        <h2>my <span>Courses</span></h2>
     </div>
 
-    <div class="gallery">
 
-        <ul class="controls">
-            <li class="button btn active" data-filter="all">all</li>
-            <li class="button btn" data-filter="web">web development</li>
-            <li class="button btn" data-filter="design">graphic design</li>
-            <li class="button btn" data-filter="photography">photography</li>
-        </ul>
+{#    <div class="gallery">#}
+{##}
+{#    {% for corse in courses %}#}
+{##}
+{##}
+{#        <ul class="controls">#}
+{#            <li class="button btn active" data-filter="all">all</li>#}
+{#            <li class="button btn" data-filter="web">web development</li>#}
+{#            <li class="button btn" data-filter="design">graphic design</li>#}
+{#            <li class="button btn" data-filter="photography">photography</li>#}
+{#        </ul>#}
+{#    {% endfor %}#}
 
         <div class="box-container">
+            {% for course in courses %}
 
             <div class="portfolio-item image web">
-                <img src="{% static 'images/Portfolio/photo_2.png' %}" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>web development</h4>
-                    <p>category</p>
-                    <a data-effect="mfp-newspaper" href="{% static 'images/Portfolio/portfolio-1.png' %}"
-                       class="view-btn"><i class="fas fa-search-plus"></i></a>
-                </div>
-            </div>
 
-            <div class="portfolio-item image web">
-                <img src="{% static 'images/Portfolio/portfolio-2.png' %}" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>web development</h4>
-                    <p>category</p>
-                    <a data-effect="mfp-newspaper" href="{% static 'images/Portfolio/portfolio-2.png' %}"
-                       class="view-btn"><i class="fas fa-search-plus"></i></a>
-                </div>
-            </div>
+            <img src="{{ course.image.url }}" alt="course"/>
 
-            <div class="portfolio-item image design">
-                <img src="{% static 'images/Portfolio/portfolio-3.png' %}" alt="Portfolio-Image"/>
                 <div class="content">
-                    <h4>graphic design</h4>
-                    <p>category</p>
-                    <a data-effect="mfp-newspaper" href="{% static 'images/Portfolio/portfolio-3.png' %}"
-                       class="view-btn"><i class="fas fa-search-plus"></i></a>
-                </div>
-                {% static '' %}
-            </div>
+                    <h4>{{ course.title }}</h4>
+                    <p>{{ course.text }}</p>
 
-            <div class="portfolio-item image design">
-                <img src="{% static 'images/Portfolio/portfolio-4.png' %}" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>graphic design</h4>
-                    <p>category</p>
-                    <a data-effect="mfp-newspaper" href="{% static 'images/Portfolio/portfolio-4.png' %}"
-                       class="view-btn"><i class="fas fa-search-plus"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-item image photography">
-                <img src="{% static '' %}images/Portfolio/portfolio-5.png" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>photography</h4>
-                    <p>category</p>
-                    <a data-effect="mfp-newspaper" href="{% static 'images/Portfolio/portfolio-5.png' %}"
-                       class="view-btn"><i class="fas fa-search-plus"></i></a>
-                </div>
-            </div>
 
-            <div class="portfolio-item image photography">
-                <img src="{% static 'images/Portfolio/portfolio-6.png' %}" alt="Portfolio-Image"/>
-                <div class="content">
-                    <h4>photography</h4>
-                    <p>category</p>
-                    <a data-effect="mfp-newspaper" href="{% static 'images/Portfolio/portfolio-6.png' %}"
-                       class="view-btn"><i class="fas fa-search-plus"></i></a>
+{#                    <a data-effect="mfp-newspaper" href="{{ course.image.url }}"#}
+{#                       class="view-btn"><i class="fas fa-search-plus"></i></a>#}
                 </div>
             </div>
+            {% endfor %}
 
         </div>
 
@@ -376,217 +278,217 @@
 <!-------------------- Portfolio Area (End) -------------------->
 
 
-<!-------------------- Testimonials Area (Start) -------------------->
-<section class="testimonial" id="testimonial">
-
-    <div class="heading">
-        <h2><span>testimonials</span></h2>
-    </div>
-
-    <div class="swiper-container testimonial-slider">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide testi-item">
-                <img src="{% static 'images/Testimonials/pic-1.png' %}" alt="Testimonial-Pic"/>
-
-                <i class="fas fa-quote-left"></i>
-
-                <p class="comment">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum deleniti architecto harum natus aliquid nostrum
-                    ad asperiores sequi, eligendi sint assumenda eum illo similique
-                    repellendus.
-                </p>
-
-                <div class="intro">
-                    <h3>jason roy</h3>
-                    <h5>web developer</h5>
-                </div>
-            </div>
-
-            <div class="swiper-slide testi-item">
-                <img src="{% static 'images/Testimonials/pic-2.png' %}" alt="Testimonial-Pic"/>
-
-                <i class="fas fa-quote-left"></i>
-
-                <p class="comment">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum deleniti architecto harum natus aliquid nostrum
-                    ad asperiores sequi, eligendi sint assumenda eum illo similique
-                    repellendus.
-                </p>
-
-                <div class="intro">
-                    <h3>evelyn jones</h3>
-                    <h5>freelancer</h5>
-                </div>
-            </div>
-
-            <div class="swiper-slide testi-item">
-                <img src="{% static 'images/Testimonials/pic-3.png' %}" alt="Testimonial-Pic"/>
-
-                <i class="fas fa-quote-left"></i>
-
-                <p class="comment">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum deleniti architecto harum natus aliquid nostrum
-                    ad asperiores sequi, eligendi sint assumenda eum illo similique
-                    repellendus.
-                </p>
-
-                <div class="intro">
-                    <h3>luke wood</h3>
-                    <h5>graphic designer</h5>
-                </div>
-            </div>
-
-            <div class="swiper-slide testi-item">
-                <img src="{% static 'images/Testimonials/pic-4.png' %}" alt="Testimonial-Pic"/>
-
-                <i class="fas fa-quote-left"></i>
-
-                <p class="comment">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum deleniti architecto harum natus aliquid nostrum
-                    ad asperiores sequi, eligendi sint assumenda eum illo similique
-                    repellendus.
-                </p>
-
-                <div class="intro">
-                    <h3>sarah glenn</h3>
-                    <h5>freelancer</h5>
-                </div>
-            </div>
-
-            <div class="swiper-slide testi-item">
-                <img src="{% static 'images/Testimonials/pic-5.png' %}" alt="Testimonial-Pic"/>
-
-                <i class="fas fa-quote-left"></i>
-
-                <p class="comment">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum deleniti architecto harum natus aliquid nostrum
-                    ad asperiores sequi, eligendi sint assumenda eum illo similique
-                    repellendus.
-                </p>
-
-                <div class="intro">
-                    <h3>samit patel</h3>
-                    <h5>graphic designer</h5>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="swiper-pagination swiper-pagination1"></div>
-
-    </div>
-</section>
+{#<!-------------------- Testimonials Area (Start) -------------------->#}
+{#<section class="testimonial" id="testimonial">#}
+{##}
+{#    <div class="heading">#}
+{#        <h2><span>testimonials</span></h2>#}
+{#    </div>#}
+{##}
+{#    <div class="swiper-container testimonial-slider">#}
+{#        <div class="swiper-wrapper">#}
+{##}
+{#            <div class="swiper-slide testi-item">#}
+{#                <img src="{% static 'images/Testimonials/pic-1.png' %}" alt="Testimonial-Pic"/>#}
+{##}
+{#                <i class="fas fa-quote-left"></i>#}
+{##}
+{#                <p class="comment">#}
+{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
+{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
+{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
+{#                    repellendus.#}
+{#                </p>#}
+{##}
+{#                <div class="intro">#}
+{#                    <h3>jason roy</h3>#}
+{#                    <h5>web developer</h5>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide testi-item">#}
+{#                <img src="{% static 'images/Testimonials/pic-2.png' %}" alt="Testimonial-Pic"/>#}
+{##}
+{#                <i class="fas fa-quote-left"></i>#}
+{##}
+{#                <p class="comment">#}
+{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
+{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
+{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
+{#                    repellendus.#}
+{#                </p>#}
+{##}
+{#                <div class="intro">#}
+{#                    <h3>evelyn jones</h3>#}
+{#                    <h5>freelancer</h5>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide testi-item">#}
+{#                <img src="{% static 'images/Testimonials/pic-3.png' %}" alt="Testimonial-Pic"/>#}
+{##}
+{#                <i class="fas fa-quote-left"></i>#}
+{##}
+{#                <p class="comment">#}
+{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
+{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
+{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
+{#                    repellendus.#}
+{#                </p>#}
+{##}
+{#                <div class="intro">#}
+{#                    <h3>luke wood</h3>#}
+{#                    <h5>graphic designer</h5>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide testi-item">#}
+{#                <img src="{% static 'images/Testimonials/pic-4.png' %}" alt="Testimonial-Pic"/>#}
+{##}
+{#                <i class="fas fa-quote-left"></i>#}
+{##}
+{#                <p class="comment">#}
+{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
+{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
+{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
+{#                    repellendus.#}
+{#                </p>#}
+{##}
+{#                <div class="intro">#}
+{#                    <h3>sarah glenn</h3>#}
+{#                    <h5>freelancer</h5>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide testi-item">#}
+{#                <img src="{% static 'images/Testimonials/pic-5.png' %}" alt="Testimonial-Pic"/>#}
+{##}
+{#                <i class="fas fa-quote-left"></i>#}
+{##}
+{#                <p class="comment">#}
+{#                    Lorem ipsum dolor sit amet consectetur adipisicing elit.#}
+{#                    Voluptatum deleniti architecto harum natus aliquid nostrum#}
+{#                    ad asperiores sequi, eligendi sint assumenda eum illo similique#}
+{#                    repellendus.#}
+{#                </p>#}
+{##}
+{#                <div class="intro">#}
+{#                    <h3>samit patel</h3>#}
+{#                    <h5>graphic designer</h5>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#        <div class="swiper-pagination swiper-pagination1"></div>#}
+{##}
+{#    </div>#}
+{#</section>#}
 <!-------------------- Testimonials Area (End) -------------------->
 
 
 <!-------------------- Blog Area (Start) -------------------->
-<section class="blog" id="blog">
-
-    <div class="heading">
-        <h2>my <span>blog</span></h2>
-    </div>
-
-    <div class="swiper-container blog-slider">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide blog-item">
-                <div class="image">
-                    <img src="{% static 'images/Blogs/blog-1.png' %}" alt="Blog-Image"/>
-                </div>
-                <div class="content">
-                    <div class="intro">
-                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>
-                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>
-                    </div>
-                    <a class="main-heading" href="#">How to make your website responsive</a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Nam possimus modi.
-                    </p>
-                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="swiper-slide blog-item">
-                <div class="image">
-                    <img src="{% static 'images/Blogs/blog-2.png' %}" alt="Blog-Image"/>
-                </div>
-                <div class="content">
-                    <div class="intro">
-                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>
-                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>
-                    </div>
-                    <a class="main-heading" href="#">Learn Web Development As A Beginner</a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Nam possimus modi.
-                    </p>
-                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="swiper-slide blog-item">
-                <div class="image">
-                    <img src="{% static 'images/Blogs/blog-3.png' %}" alt="Blog-Image"/>
-                </div>
-                <div class="content">
-                    <div class="intro">
-                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>
-                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>
-                    </div>
-                    <a class="main-heading" href="#">Complete Roadmap For Web Development</a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Nam possimus modi.
-                    </p>
-                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="swiper-slide blog-item">
-                <div class="image">
-                    <img src="{% static 'images/Blogs/blog-4.png' %}" alt="Blog-Image"/>
-                </div>
-                <div class="content">
-                    <div class="intro">
-                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>
-                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>
-                    </div>
-                    <a class="main-heading" href="#">Websites & Tools For Every Web Developer</a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Nam possimus modi.
-                    </p>
-                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="swiper-slide blog-item">
-                <div class="image">
-                    <img src="{% static 'images/Blogs/blog-5.png' %}" alt="Blog-Image"/>
-                </div>
-                <div class="content">
-                    <div class="intro">
-                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>
-                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>
-                    </div>
-                    <a class="main-heading" href="#">Top 10 CSS tricks for every web developer</a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Nam possimus modi.
-                    </p>
-                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="swiper-pagination swiper-pagination2"></div>
-
-    </div>
-
-</section>
+{#<section class="blog" id="blog">#}
+{##}
+{#    <div class="heading">#}
+{#        <h2>my <span>blog</span></h2>#}
+{#    </div>#}
+{##}
+{#    <div class="swiper-container blog-slider">#}
+{#        <div class="swiper-wrapper">#}
+{##}
+{#            <div class="swiper-slide blog-item">#}
+{#                <div class="image">#}
+{#                    <img src="{% static 'images/Blogs/blog-1.png' %}" alt="Blog-Image"/>#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <div class="intro">#}
+{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
+{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
+{#                    </div>#}
+{#                    <a class="main-heading" href="#">How to make your website responsive</a>#}
+{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
+{#                        Nam possimus modi.#}
+{#                    </p>#}
+{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide blog-item">#}
+{#                <div class="image">#}
+{#                    <img src="{% static 'images/Blogs/blog-2.png' %}" alt="Blog-Image"/>#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <div class="intro">#}
+{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
+{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
+{#                    </div>#}
+{#                    <a class="main-heading" href="#">Learn Web Development As A Beginner</a>#}
+{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
+{#                        Nam possimus modi.#}
+{#                    </p>#}
+{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide blog-item">#}
+{#                <div class="image">#}
+{#                    <img src="{% static 'images/Blogs/blog-3.png' %}" alt="Blog-Image"/>#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <div class="intro">#}
+{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
+{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
+{#                    </div>#}
+{#                    <a class="main-heading" href="#">Complete Roadmap For Web Development</a>#}
+{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
+{#                        Nam possimus modi.#}
+{#                    </p>#}
+{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide blog-item">#}
+{#                <div class="image">#}
+{#                    <img src="{% static 'images/Blogs/blog-4.png' %}" alt="Blog-Image"/>#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <div class="intro">#}
+{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
+{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
+{#                    </div>#}
+{#                    <a class="main-heading" href="#">Websites & Tools For Every Web Developer</a>#}
+{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
+{#                        Nam possimus modi.#}
+{#                    </p>#}
+{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide blog-item">#}
+{#                <div class="image">#}
+{#                    <img src="{% static 'images/Blogs/blog-5.png' %}" alt="Blog-Image"/>#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <div class="intro">#}
+{#                        <h5><i class="fas fa-calendar-alt"></i><span>1st jan, 2022</span></h5>#}
+{#                        <h5><i class="fas fa-user"></i><span>by admin</span></h5>#}
+{#                    </div>#}
+{#                    <a class="main-heading" href="#">Top 10 CSS tricks for every web developer</a>#}
+{#                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.#}
+{#                        Nam possimus modi.#}
+{#                    </p>#}
+{#                    <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i></a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#        <div class="swiper-pagination swiper-pagination2"></div>#}
+{##}
+{#    </div>#}
+{##}
+{#</section>#}
 <!-------------------- Blog Area (End) -------------------->
 
 
