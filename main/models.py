@@ -63,35 +63,27 @@ class Course(models.Model):
 
     def __str__(self):
         return f'{self.id} - {self.title} ({self.date})'
-#
-#
-# class Skill(models.Model):
-#     name: models.CharField(max_length=100)
-#     level: models.IntegerField()
-#
-#     def __str__(self):
-#         return self.name
-#
-# class Experience(models.Model):
-#     title: models.CharField(max_length=200)
-#     company: models.CharField(max_length=200)
-#     description: models.TextField()
-#     start_date: models.DateField()
-#     end_date: models.DateField(null=True, blank=True)
-#
-#     def __str__(self):
-#         return f"{self.title} at {self.company}"
-#
-#
-# class Project(models.Model):
-#     # class Meta:
-#     #     verbose_name_plural = 'projects'
-#     title: models.CharField(max_length=100)
-#     description: models.TextField()
-#     link: models.URLField(blank=True)
-#
-#     def __str__(self):
-#         return self.title
+
+class Basic(models.Model):
+    class Meta:
+        verbose_name_plural = 'Basics'
+    title: models.CharField( max_length=100, blank=True)
+    phone: models.CharField(max_length=20, blank=True)
+    email: models.EmailField(blank=True)
+    twitter = models.TextField(blank=True)
+    facebook = models.TextField(blank=True)
+    instagram = models.TextField(blank=True)
+    linkedin = models.TextField(blank=True)
+    pinterest = models.TextField(blank=True)
+    github: models.TextField(blank=True)
+    footer = RichTextField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+
+
 
 
 

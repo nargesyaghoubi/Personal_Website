@@ -20,6 +20,11 @@ class AcademyAdmin(admin.ModelAdmin):
 class CourseAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'date']
     list_display_links = ['id', 'title', 'date']
+#
+# class BasicAdmin(admin.ModelAdmin):
+#     list_display = ['title']
+#     list_display_links = ['title']
+
 
 
 admin.site.register(Skill, SkillAdmin)
@@ -27,6 +32,7 @@ admin.site.register(Project, ProjectAdmin)
 admin.site.register(Academy, AcademyAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Contact)
+admin.site.register(Basic)
 
 
 
