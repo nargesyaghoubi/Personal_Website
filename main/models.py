@@ -67,15 +67,15 @@ class Course(models.Model):
 class Basic(models.Model):
     class Meta:
         verbose_name_plural = 'Basics'
-    title: models.CharField( max_length=100, blank=True)
-    phone: models.CharField(max_length=20, blank=True)
-    email: models.EmailField(blank=True)
+
+    icon = models.CharField(max_length=30, blank=True)
+    title= models.CharField( max_length=100, blank=True)
+    phone= models.CharField(max_length=20, blank=True)
+    email= models.EmailField(blank=True)
     twitter = models.TextField(blank=True)
-    facebook = models.TextField(blank=True)
     instagram = models.TextField(blank=True)
     linkedin = models.TextField(blank=True)
-    pinterest = models.TextField(blank=True)
-    github: models.TextField(blank=True)
+    github= models.TextField(blank=True)
     footer = RichTextField(blank=True)
 
     def __str__(self):

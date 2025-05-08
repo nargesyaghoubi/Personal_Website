@@ -230,20 +230,6 @@
         <h2>my <span>Courses</span></h2>
     </div>
 
-
-{#    <div class="gallery">#}
-{##}
-{#    {% for corse in courses %}#}
-{##}
-{##}
-{#        <ul class="controls">#}
-{#            <li class="button btn active" data-filter="all">all</li>#}
-{#            <li class="button btn" data-filter="web">web development</li>#}
-{#            <li class="button btn" data-filter="design">graphic design</li>#}
-{#            <li class="button btn" data-filter="photography">photography</li>#}
-{#        </ul>#}
-{#    {% endfor %}#}
-
         <div class="box-container">
             {% for course in courses %}
 
@@ -284,6 +270,7 @@
             <h3>get in touch</h3>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+{#            {% for basic in basics %}#}
 
             <div class="info-item">
                 <h4>Phone:</h4>
@@ -291,6 +278,7 @@
                     <div class="fas fa-phone"></div>
                     <p>+123-456-789</p>
                 </div>
+{#                {% endfor %}#}
                 <div class="detail">
                     <div class="fas fa-phone"></div>
                     <p>+111-222-333</p>
@@ -345,18 +333,25 @@
 
 
 <!-------------------- Footer Area (Start) -------------------->
+
 <footer>
+{% for basic in basics %}
     <div class="social">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin-in"></a>
+
+        <a href="{{ basic.twitter }}" class="fab fa-twitter"></a>
+        <a href="{{ basic.instagram }}" class="fab fa-instagram"></a>
+        <a href="{{ basic.linkedin }}" class="fab fa-linkedin-in"></a>
+
     </div>
+     {% endfor %}
 
     <div class="content">
-        <p>created by <span>Narges Yaghoubi</span> | all rights reserved</p>
+        <p>created by <span style="color: black">Narges Yaghoubi</span> | all rights reserved</p>
     </div>
+
 </footer>
+
+
 <!-------------------- Footer Area (End) -------------------->
 
 
