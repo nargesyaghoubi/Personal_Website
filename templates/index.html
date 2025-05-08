@@ -269,39 +269,35 @@
 
             <h3>get in touch</h3>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-{#            {% for basic in basics %}#}
+            <p>Open to coding challenges, creative dev ideas, and meaningful tech talks. Let’s connect and collaborate on your next project.</p>
+            {% for basic in basics %}
 
             <div class="info-item">
                 <h4>Phone:</h4>
                 <div class="detail">
-                    <div class="fas fa-phone"></div>
-                    <p>+123-456-789</p>
+                    <div class="fas fa-phone">
+
+                    </div>
+
+                    <p><a href="tel:{{ basic.phone }}" style="color: white">+989911627805</a></p>
                 </div>
-{#                {% endfor %}#}
-                <div class="detail">
-                    <div class="fas fa-phone"></div>
-                    <p>+111-222-333</p>
-                </div>
+
             </div>
 
             <div class="info-item">
                 <h4>email:</h4>
                 <div class="detail">
                     <div class="fas fa-envelope"></div>
-                    <p class="gmail">abc@gmail.com</p>
+                  <p><a href="mailto:{{ basic.email }}" style="color: white">nargesyaghoubi2001@gmail.com</a></p>
                 </div>
-                <div class="detail">
-                    <div class="fas fa-envelope"></div>
-                    <p class="gmail">xyz@gmail.com</p>
-                </div>
+
             </div>
 
             <div class="info-item">
                 <h4>linkedin:</h4>
                 <div class="detail">
                     <div class="fab fa-linkedin"></div>
-                    <p class="linkedin">https://www.linkedin.com/in/narges-yaghoubi-656a28243/</p>
+                    <p class="linkedin"><a href="{{ basic.linkedin }}" style="color: white">Linkedin</a></p>
                 </div>
             </div>
 
@@ -309,10 +305,12 @@
                 <h4>github:</h4>
                 <div class="detail">
                     <div class="fab fa-github"></div>
-                    <p class="github">https://github.com/nargesyaghoubi</p>
+                    <p class="github"><a href="{{ basic.github }}" style="color: white">GitHub</a></p>
                 </div>
             </div>
+            {% endfor %}
         </div>
+
 
         <form method="post" class="contact-form" id="contactUs-Form">
 
@@ -338,7 +336,7 @@
 {% for basic in basics %}
     <div class="social">
 
-        <a href="{{ basic.twitter }}" class="fab fa-twitter"></a>
+        <a href="{{ basic.twitter }}" class="fab fa-x-twitter"></a>
         <a href="{{ basic.instagram }}" class="fab fa-instagram"></a>
         <a href="{{ basic.linkedin }}" class="fab fa-linkedin-in"></a>
 
