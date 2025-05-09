@@ -93,7 +93,7 @@
 <!-------------------- About Area (Start) -------------------->
 <section class="about" id="about">
 
-    <div class="box-container">
+    <di class="box-container">
 
         <div class="image">
             <img src="{% static 'images/About/photo_2.jpg' %}" alt="About-Image"/>
@@ -105,7 +105,7 @@
             <p>Passionate and driven programmer with two years of experience and asolid foundation in Python,
                 with knowledge of Machine Learning, DeepLearning, and NLP models and algorithms.
                 Experienced in multiple projectsrelated to Image Processing and Computer Vision.
-                Eager to apply my skillsin dynamic, hands-on projects and collaborative environments, whilecontinuously expanding my knowledge and pushing the boundaries of myexpertise.</p>
+                Eager to apply my skillsin dynamic, hands-on projects and collaborative environments, While continuously expanding my knowledge and pushing the boundaries of myexpertise.</p>
 
             <div class="about-info">
 
@@ -136,7 +136,7 @@
 
             </div>
 
-        </div>
+        </di>
 
     </div>
 
@@ -218,6 +218,7 @@
 
             </div>
         {% endfor %}
+    </div>
 
 </section>
 <!-------------------- Services Area (End) -------------------->
@@ -241,9 +242,6 @@
                     <h4>{{ course.title|safe }}</h4>
                     <p>{{ course.text }}</p>
 
-
-{#                    <a data-effect="mfp-newspaper" href="{{ course.image.url }}"#}
-{#                       class="view-btn"><i class="fas fa-search-plus"></i></a>#}
                 </div>
             </div>
             {% endfor %}
@@ -279,7 +277,7 @@
 
                     </div>
 
-                    <p><a href="tel:{{ basic.phone }}" style="color: white">+989911627805</a></p>
+                    <p><a href="tel:{{ basic.phone }}" style="color: white">{{ basic.phone }}</a></p>
                 </div>
 
             </div>
@@ -288,7 +286,7 @@
                 <h4>email:</h4>
                 <div class="detail">
                     <div class="fas fa-envelope"></div>
-                  <p><a href="mailto:{{ basic.email }}" style="color: white">nargesyaghoubi2001@gmail.com</a></p>
+                  <p><a href="mailto:{{ basic.email }}" style="color: white">{{ basic.email }}</a></p>
                 </div>
 
             </div>
@@ -312,12 +310,13 @@
         </div>
 
 
-        <form method="post" class="contact-form" id="contactUs-Form">
+        <form method="post" class="contact-form" id="contactUs-Form" action="{% url 'contact' %}" >
+            {% csrf_token %}
 
-            <input type="text" name="name" class="box" id="name" placeholder="name" required/>
-            <input type="email" name="email" class="box" id="email" placeholder="email" required/>
+            <input type="text" name="massage_name" class="box" id="name" placeholder="name" required/>
+            <input type="email" name="massage_email" class="box" id="email" placeholder="email" required/>
             <input type="text" name="subject" class="box" id="subject" placeholder="subject" required/>
-            <textarea cols="30" rows="10" name="comment" id="comment" class="box" placeholder="message"></textarea>
+            <textarea cols="30" rows="10" name="massage" id="comment" class="box" placeholder="message"></textarea>
             <button type="submit" class="btn" name="submit" id="submit">send message</button>
 
             <span class="alert" id="msg"></span>
@@ -385,26 +384,6 @@
     });
 </script>
 
-<!-- Contact-Form Script -->
-<script>
-    jQuery('#contactUs-Form').on('submit', function (e) {
-        jQuery('#msg').html('');
-        jQuery('#submit').html('Please wait');
-        jQuery('#submit').attr('disabled', true);
-        jQuery.ajax({
-            url: 'assets/php/submit.php',
-            type: 'post',
-            data: jQuery('#contactUs-Form').serialize(),
-            success: function (result) {
-                jQuery('#msg').html(result);
-                jQuery('#submit').html('Submit');
-                jQuery('#submit').attr('disabled', false);
-                jQuery('#contactUs-Form')[0].reset();
-            }
-        });
-        e.preventDefault();
-    });
-</script>
 
 </body>
 </html>

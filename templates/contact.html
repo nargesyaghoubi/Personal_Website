@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Sent</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--black);
+}
+
+
+        .message-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .message-box h1 {
+            color: #9a2ad7;
+            font-size: 36px;
+        }
+        .message-box h2 {
+            color: #b774dc;
+            font-size: 36px;
+        }
+        .message-box p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: var(--purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #9527ae;
+        }
+    </style>
+</head>
+<body>
+
+<div class="message-box">
+    <i class="fas fa-check-circle fa-3x" style="color: #c12ecc;"></i>
+    <h2>Thank You<h1>{{ massage_name }}</h1></h2>
+    <p>Your message has been sent successfully.<br>I'll get back to you as soon as possible.</p>
+    <a href="{% url 'index' %}" class="btn"><i class="fas fa-home"></i> Back to Home</a>
+</div>
+</body>
+
+</html>
